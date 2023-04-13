@@ -90,8 +90,13 @@ class IntelDevice:
 
         The function does not return anything. It simply fills the self.coordinate_to_location data structure with the right mapping.
         """
-
+            
         # TODO
+              
+        for coord in self.coordinate_to_loc:
+            loc = self.coordinate_to_loc[coord]
+            self.loc_grid[loc[0]][loc[1]] = coord
+          
         raise NotImplementedError()
 
     def fill_loc_grid(self):
@@ -108,6 +113,12 @@ class IntelDevice:
         """
 
         # TODO
+        
+        
+        for coord in self.coordinate_to_loc:
+            loc = self.coordinate_to_loc[coord]
+            self.loc_grid[loc[0]][loc[1]] = coord
+        
         raise NotImplementedError()
 
 
